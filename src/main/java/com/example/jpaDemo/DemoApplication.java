@@ -1,14 +1,11 @@
-package com.example.demo;
+package com.example.jpaDemo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 
-
-@Import(CustomRepositoryRestMvcConfiguration.class)
 @Configuration
 @SpringBootApplication
 public class DemoApplication {

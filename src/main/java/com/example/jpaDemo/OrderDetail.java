@@ -1,21 +1,21 @@
-package com.example.demo;
+package com.example.jpaDemo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="order_detail")
-@IdClass(OrderDetailPk.class)
 public class OrderDetail {
 	
 	@Id
+	@Column(name="order_detail_pk")
+	private Integer orderDetailPk;
+	
 	@Column(name="order_no")
 	private Integer orderNo;
 	
-	@Id
 	@Column(name="item_no")
 	private Integer itemNo;
 	
@@ -99,6 +99,14 @@ public class OrderDetail {
 
 	public void setShipQty(Integer shipQty) {
 		this.shipQty = shipQty;
+	}
+
+	public Integer getOrderDetailPk() {
+		return orderDetailPk;
+	}
+
+	public void setOrderDetailPk(Integer orderDetailPk) {
+		this.orderDetailPk = orderDetailPk;
 	}
 	
 	

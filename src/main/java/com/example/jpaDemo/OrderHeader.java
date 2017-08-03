@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.jpaDemo;
 
 import java.sql.Date;
 
