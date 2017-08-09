@@ -2,6 +2,8 @@ package com.example.jpaDemo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -11,6 +13,7 @@ public class OrderDetail {
 	
 	@Id
 	@Column(name="order_detail_pk")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer orderDetailPk;
 	
 	@Column(name="order_no")
