@@ -8,7 +8,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource
 public interface LeadTimeRepository extends CrudRepository<LeadTime, Integer>{
-	LeadTime findByOrderTypeAndWarehouseAndWalmartDc(@Param("orderType") String orderType, 
+	LeadTime findByOrderTypeAndWarehouseAndWalmartDc(
+			@Param("orderType") String orderType, 
 			@Param("warehouse") String warehouse, 
 			@Param("walmartDc") String walmartDc);
 	
