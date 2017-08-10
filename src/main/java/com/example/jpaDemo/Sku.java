@@ -34,6 +34,8 @@ public class Sku {
 	private String gtin;	
 	@Column(name="wm_style")
 	private String wmStyle;
+	@Column(name="wm_item")
+	private String wmItem;
 	@Column(name="fine_line")
 	private Integer fineLine;
 	public Integer getItemNo() {
@@ -107,6 +109,12 @@ public class Sku {
 	}
 	public void setFineLine(Integer fineLine) {
 		this.fineLine = fineLine;
+	}
+	public String getWmItem() {
+		return wmItem;
+	}
+	public void setWmItem(String wmItem) {
+		this.wmItem = wmItem;
 	}
 	
 	
