@@ -18,9 +18,6 @@ public class Pim {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer pimPk;
 	
-	@Column(name="contract_id")
-	private Integer contractId;
-	
 	@Column(name="upc")
 	private String upc;
 	
@@ -39,23 +36,18 @@ public class Pim {
 	@Column(name="vendor_sku")
 	private String vendorSku;
 	
-	@Column(name="fine_line")
-	private Integer fineLine;
-
+	@Column(name="ship_date")
+	private Date shipDate;
+	
+	@Column(name="cancel_date")
+	private Date cancelDate;
+	
 	public Integer getPimPk() {
 		return pimPk;
 	}
 
 	public void setPimPk(Integer pimPk) {
 		this.pimPk = pimPk;
-	}
-
-	public Integer getContractId() {
-		return contractId;
-	}
-
-	public void setContractId(Integer contractId) {
-		this.contractId = contractId;
 	}
 
 	public String getUpc() {
@@ -106,13 +98,19 @@ public class Pim {
 		this.vendorSku = vendorSku;
 	}
 
-	public Integer getFineLine() {
-		return fineLine;
+	public Date getShipDate() {
+		return shipDate;
 	}
 
-	public void setFineLine(Integer fineLine) {
-		this.fineLine = fineLine;
+	public void setShipDate(Date shipDate) {
+		this.shipDate = shipDate;
 	}
-	
-	
+
+	public Date getCancelDate() {
+		return cancelDate;
+	}
+
+	public void setCancelDate(Date cancelDate) {
+		this.cancelDate = cancelDate;
+	}
 }
