@@ -8,5 +8,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource
 public interface PimRepository extends PagingAndSortingRepository<Pim, Integer>{
-	Pim findByUpcAndShipDate(@Param("upc") String poNbr, @Param("shipDate") Date shipDate);
+	Pim findByUpcAndColorAndSizeAndShipDate(@Param("upc") String poNbr,
+			@Param("color") String color,
+			@Param("size") String size,
+			@Param("shipDate") Date shipDate);
 }

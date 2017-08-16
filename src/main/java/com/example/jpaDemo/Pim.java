@@ -20,27 +20,25 @@ public class Pim {
 	
 	@Column(name="upc")
 	private String upc;
-	
 	@Column(name="pack_qty")
 	private Integer packQty;
-	
 	@Column(name="ord_qty")
 	private Integer ordQty;
-	
 	@Column(name="unit_price")
 	private BigDecimal unitPrice;
-	
 	@Column(name="in_dc_date")
 	private Date inDcDate;
-	
 	@Column(name="vendor_sku")
 	private String vendorSku;
-	
 	@Column(name="ship_date")
 	private Date shipDate;
-	
 	@Column(name="cancel_date")
 	private Date cancelDate;
+	@Column(name="color")
+	private String color;
+	@Column(name="size")
+	private String size;
+	
 	
 	public Integer getPimPk() {
 		return pimPk;
@@ -112,5 +110,21 @@ public class Pim {
 
 	public void setCancelDate(Date cancelDate) {
 		this.cancelDate = cancelDate;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public String getSize() {
+		return size;
+	}
+
+	public void setSize(String size) {
+		this.size = size;
 	}
 }
