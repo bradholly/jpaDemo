@@ -38,6 +38,11 @@ public class Sku {
 	private String wmItem;
 	@Column(name="fine_line")
 	private Integer fineLine;
+	@Column(name="weight")
+	private BigDecimal weight;
+	@Column(name="volume")
+	private BigDecimal volume;
+	
 	public Integer getItemNo() {
 		return itemNo;
 	}
@@ -115,6 +120,18 @@ public class Sku {
 	}
 	public void setWmItem(String wmItem) {
 		this.wmItem = wmItem;
+	}
+	public BigDecimal getWeight() {
+		return weight;
+	}
+	public void setWeight(BigDecimal weight) {
+		this.weight = weight;
+	}
+	public BigDecimal getVolume() {
+		return volume;
+	}
+	public void setVolume(BigDecimal volume) {
+		this.volume = volume;
 	}
 	
 	
